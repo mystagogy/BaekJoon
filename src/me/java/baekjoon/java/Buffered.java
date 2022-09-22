@@ -1,4 +1,4 @@
-package me.java.baekjoon.LOOP;
+package me.java.baekjoon.java;
 
 import java.io.*;
 import java.util.StringTokenizer;
