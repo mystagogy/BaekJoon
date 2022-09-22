@@ -1,4 +1,4 @@
-package LOOP;
+package me.java.baekjoon.LOOP;
 import java.util.Scanner;
 
 public class Add_Loop {
