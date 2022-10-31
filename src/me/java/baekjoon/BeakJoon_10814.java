@@ -1,4 +1,4 @@
-package me.java.baekjoon.java;
+package me.java.baekjoon;
 
 import java.util.Arrays;
 import java.util.Comparator;

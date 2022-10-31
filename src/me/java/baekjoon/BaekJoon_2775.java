@@ -1,4 +1,4 @@
-package me.java.baekjoon.java;
+package me.java.baekjoon;
 import java.util.Scanner;
 /*
 재귀함수와 반복문 중 어느 것을 사용하는 것이 좋을까?
