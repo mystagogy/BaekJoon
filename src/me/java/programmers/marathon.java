@@ -4,7 +4,7 @@ package me.java.programmers;
 import java.util.HashMap;
 
 public class marathon {
-    public static String solution(String[] participant, String[] completion) {
+    public String solution(String[] participant, String[] completion) {
         String answer = "";
         HashMap<String, Integer> hashmap = new HashMap<>();
         for(String participants : participant){
@@ -19,9 +19,4 @@ public class marathon {
         }
         return answer;
     }
-
-    public static void main(String[] args) {
-        System.out.println(solution(new String[]{"marina", "josipa", "nikola", "vinko", "filipa"}, new String[]{"josipa", "filipa", "marina", "nikola"}));
-    }
-
 }
