@@ -1,54 +1,44 @@
 package me.java.baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Scanner;
-class Person {
-
-    private int age;
-    private String name;
-
-    public Person() {};
-
-    public Person(int age, String name) {
-        this.age = age;
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-}
+import java.util.StringTokenizer;
 
 public class BeakJoon_10814 {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            int num = sc.nextInt();
-            Person[] person = new Person[num];
-
-            for(int i = 0; i < num; i++){
-                person[i] = new Person(sc.nextInt(), sc.next());
+    public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            int num = Integer.parseInt(br.readLine());
+            String[][] list = new String[num][2];
+            for(int i = 0; i < list.length; i++){
+                String str = br.readLine();
+                StringTokenizer st = new StringTokenizer(str);
+                list[i][0] = st.nextToken();
+                list[i][1] = st.nextToken();
             }
-            Arrays.sort(person, new Comparator<Person>() {
+
+            Arrays.sort(list, new Comparator<String[]>() {
                 @Override
-                public int compare(Person o1, Person o2) {
-                    return o1.getAge() - o2.getAge();
+                public int compare(String[] o1, String[] o2) {
+                    if (o1[0] == o2[0])
+                        return 1;
+                    else
+                        return Integer.parseInt(o1[0]) - Integer.parseInt(o2[0]);
                 }
             });
-            for(int i = 0; i < num; i++)
-                System.out.println(person[i]);
+            StringBuilder sb = new StringBuilder();
+            for(int i = 0; i < list.length; i++){
+                sb.append(list[i][0]).append(" ").append(list[i][1]);
+                sb.append("\n");
+            }
+            System.out.println(sb);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
+}
 
