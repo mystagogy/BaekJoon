@@ -1,8 +1,7 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Stack;
+
 
 public class FruitBox {
     public static int solution(int k, int m, int[] score) {

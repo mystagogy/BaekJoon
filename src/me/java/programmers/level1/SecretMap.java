@@ -1,4 +1,4 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 /*
 프로그래머스 코딩테스트 연습 레벨1
 2018 KAKAO BLIND RECRUITMENT - 비밀지도

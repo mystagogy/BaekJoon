@@ -1,4 +1,4 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 
 public class KeyPad {
     public int[] find(int push){

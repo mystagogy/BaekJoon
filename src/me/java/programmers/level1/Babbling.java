@@ -1,4 +1,4 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 
 public class Babbling {
     public static int solution(String[] babbling) {

@@ -1,4 +1,4 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 
 public class cola {
     public static int solution(int a, int b, int n) {

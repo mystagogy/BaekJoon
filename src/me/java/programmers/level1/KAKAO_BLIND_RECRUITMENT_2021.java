@@ -1,4 +1,4 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 
 public class KAKAO_BLIND_RECRUITMENT_2021 {
     public String solution(String new_id) {

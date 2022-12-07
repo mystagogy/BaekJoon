@@ -1,4 +1,4 @@
-package me.java.programmers;
+package me.java.programmers.level1;
 
 public class weapon {
     public static int solution(int number, int limit, int power) {
