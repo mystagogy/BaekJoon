@@ -3,7 +3,7 @@ package me.java.programmers.level2;
 import java.util.StringTokenizer;
 
 public class JadenCase {
-    public static String solution(String s) {
+    public String solution(String s) {
         String answer = "";
         StringBuilder sb = new StringBuilder();
         String[] strings = s.split(" ");
@@ -37,12 +37,5 @@ public class JadenCase {
             answer = sb.substring(0,sb.length()-1);
         }
         return answer;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(solution("3people unFollowed me"));
-        System.out.println(solution("for the last week"));
-        System.out.println(solution("A Aa "));
-        System.out.println(solution("a  aa "));
     }
 }
