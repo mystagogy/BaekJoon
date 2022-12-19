@@ -1,12 +1,9 @@
 package me.java.programmers.level2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Shiritori {
-    public static int[] solution(int n, String[] words) {
+    public int[] solution(int n, String[] words) {
         int[] answer = {};
         answer = new int[2];
 
@@ -49,12 +46,36 @@ public class Shiritori {
         }
         return answer;
     }
+    public static int[] solution2(int n, String[] words){
+        int[] answer = new int[2];
 
-    public static void main(String[] args) {
-        System.out.println(solution(3, new String[]{"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"}));
+        Stack<String> stack = new Stack<>();
 
-        System.out.println(solution(5, new String[]{"hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"}));
+        int index = 1;
+        int count = 1;
+        for(String word : words){
+            String before = "";
+            if(stack.isEmpty()){ stack.push(word);}
+            else {
+                before = stack.peek();
 
-        System.out.println(solution(2, new String[]{"hello", "one", "even", "never", "now", "world", "draw"}));
+                if (stack.contains(word) || before.charAt(before.length() - 1) != word.charAt(0)) {
+                    answer[0] = index;
+                    answer[1] = count;
+                    break;
+                } else {
+                    stack.push(word);
+                }
+            }
+            if(index == n){
+                index=1;
+                count++;
+            }
+            else{
+                index++;
+            }
+        }
+
+        return answer;
     }
 }
